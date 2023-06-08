@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Lviv!</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            min-height: auto;
+            background-blend-mode: overlay;
+            background-size: cover;
+            margin: 0;
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            height: 110px;
+            background-color: #FFFFFF;
+            padding-left: 20px;
+            z-index: 999;
+            opacity: 0.9;
+        }
+        
+        nav img {
+      width: 224.32px;
+      height: 70px;
+            margin-right: 45px;
+        }
+        
+        nav a {
+            font-family: 'Montserrat';
+            font-weight: normal;
+            font-size: 36px;
+            color: #000000;
+            margin-top: 31px;
+            margin-right: 45px;
+            text-decoration: none; /* Вимкнути підкреслення */
+        }
+        
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url(image/background.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .case {
+            width: 1400px;
+            height: auto;
+            border-radius: 40px;
+            background: #FFFFFF;
+            margin-top: 160px;
+            margin-bottom: 75px;
+            padding-bottom: 10px;
+        }
+        
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+        
+        .case h2 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 96px;
+            line-height: 117px;
+            color: #4B4B4B;
+        }
+        
+        .place {
+            display: flex;
+            align-items: center;
+        }
+        
+        .photo {
+            width: 200px;
+            height: auto;
+            object-fit: cover;
+            padding: 5px;
+           margin-bottom: 5px;
+           transition: transform 0.1s ease;
+        }
+
+        .description_photo {
+            width: 530px;
+            height: 350px;
+            object-fit: cover;
+            padding: 5px;
+            margin-right: 20px;
+           transition: transform 0.3s ease;
+        }
+
+        .description_photo {
+           transform: scale(1.2);
+        }
+
+        .photo:hover {
+           transform: rotate(10deg);
+        }
+        
+        .description {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+        }
+        
+        .information_row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .information {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .information h3 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 44px;
+            color: #000000;
+            margin: 5px 0;
+        }
+
+        .information p {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 44px;
+            color: #000000;
+            margin: 5px 0;
+        }
+        
+        input[type="text"] {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            width: 100%;
+            padding: 20px;
+            margin: 10px 10px;
+            border: 1px solid #000000;
+            border-radius: 38px;
+        }
+        
+        button {
+            padding: 10px 20px;  
+            width: 600px;         
+            height: 70px;
+            background: linear-gradient(90.92deg, #84C4FF 0%, #C68EFF 101.47%);
+            box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 30px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            margin: 10px 15px;
+            transition: transform 0.3s;
+            color: #000000;
+        }
+        
+        button:hover {
+            transform: scale(1.1);
+        }
+        
+        button:active {
+            transform: scale(0.9);
+        }
+        
+    </style>
+    <script>
+        function zoomImage(image, newSrc) {
+            image.classList.add("zoomed");
+            image.src = newSrc;
+        }
+        
+        function restoreImage(image, originalSrc) {
+            image.classList.remove("zoomed");
+            image.src = originalSrc;
+        }
+        
+        function openPopup() {
+            var width = 300;
+            var height = 200;
+            var left = (window.innerWidth - width) / 2;
+            var top = (window.innerHeight - height) / 2;
+            window.open('OK.html', 'We are working🛠', 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top);
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <img src="image/logo.png" alt="Logo" width="141" height="44">
+        <a href="index.html">Головна</a>
+        <a href="index.html">Про нас</a>
+        <a href="index.html">Контакти</a>
+        <a href="order.html">Замовити</a>
+    </nav>
+
+    <div class="container">
+        <div class="case">
+            <div class="row">
+                <h2>ДАНІ НЕ ПІДВАНТАЖЕНО</h2>
+            </div>
+            <div class="row">
+                <div class="place">
+                    <img src="no.png" alt="Фото не підвантажено" class="description_photo" onmouseover="zoomImage(this, 'nope.png')" onmouseout="restoreImage(this, 'no.png')">
+                    <div class="description">Дані не підвантажено</div>
+                </div>
+            </div>
+            <div class="information_row">
+                <div class="information">
+                    <img src="image/Clock.svg" alt="Image" class="photo">
+                    <h3>Час</h3>
+                    <p>Дані не підвантажено</p>
+                </div>
+                <div class="information">
+                    <img src="image/Money.svg" alt="Image" class="photo">
+                    <h3>Ціна</h3>
+                    <p>Дані не підвантажено</p>
+                </div>
+                <div class="information">
+                    <img src="image/Person.svg" alt="Image" class="photo">
+                    <h3>ГІД</h3>
+                    <p>Дані не підвантажено</p>
+                </div>
+            </div>
+            <div class="row">
+                <input type="text" id="name" placeholder="Ім'я">
+                <input type="text" id="phone" placeholder="066-666-66-66">
+            </div>
+            <div class="row">
+                <input type="text" id="surname" placeholder="Прізвище">
+                <input type="text" id="email" placeholder="example@gmail.com">
+            </div>
+            <div class="row">
+                <button class="order" onclick="openPopup()">ЗАМОВИТИ</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
